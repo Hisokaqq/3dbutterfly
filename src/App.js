@@ -6,14 +6,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Butterfly from './Butterfly';
+import { Canvas } from '@react-three/fiber';
 
 function App() {
   return (
-    <>
+    <Canvas>
       <color attach="background" args={["#000000"]} />
       <ScrollControls pages={6} damping={0.25}>
-        <ambientLight intensity={0.5} />
-        <Environment preset="warehouse" />
+        <ambientLight intensity={1.5} />
 
         <Scroll>
         <Float
@@ -110,7 +110,7 @@ function App() {
           </Container>   
         </Scroll>
       </ScrollControls>
-    </>
+    </Canvas>
   );
 }
 
